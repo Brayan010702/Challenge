@@ -11,6 +11,10 @@ runs/detect/train/weights/epoch*.pt
 runs/predict/
 runs/predict_display/
 
+# YOLO base weights (downloaded automatically)
+challenge/yolo11n.pt
+challenge/yolov8n.pt
+
 # Python
 __pycache__/
 *.py[cod]
@@ -20,6 +24,11 @@ __pycache__/
 env/
 venv/
 .venv
+
+# Testing
+.coverage
+.pytest_cache/
+reports/
 
 # Jupyter
 .ipynb_checkpoints/

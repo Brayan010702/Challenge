@@ -2,6 +2,7 @@
 fastapi==0.115.4
 pydantic~=2.5
 uvicorn~=0.29
+python-multipart~=0.0.20  # Required for file uploads
 
 # ML and CV dependencies
 ultralytics==8.3.74
