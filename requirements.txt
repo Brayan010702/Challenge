@@ -2,6 +2,13 @@
 fastapi==0.115.4
 pydantic~=2.5
 uvicorn~=0.29
+
+# ML and CV dependencies
 ultralytics==8.3.74
 numpy==1.26.4
 opencv-python-headless==4.11.0.86
+
+# Notebook dependencies
+pandas>=2.0.0
+matplotlib>=3.7.0
+pyyaml>=6.0
