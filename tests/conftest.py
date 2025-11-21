@@ -4,7 +4,7 @@ import yaml
 import random
 import pytest
 
-DATA_YAML_PATH = "../data/data.yaml"
+DATA_YAML_PATH = "data/data.yaml"
 
 
 def _load_data_cfg():
@@ -51,6 +51,9 @@ def test_images(data_cfg):
 def yolo_labels():
     def _read(label_path: str):
         rows = []
+        # Ensure .txt extension (fix for test compatibility)
+        if not label_path.endswith('.txt'):
+            label_path = os.path.splitext(label_path)[0] + '.txt'
         if not os.path.exists(label_path):
             return rows
         with open(label_path, "r") as f:

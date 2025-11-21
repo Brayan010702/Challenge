@@ -1,2 +1,52 @@
+# Documentation
 /*CLAUDE.md
-.gitignore
+
+# Dataset (too large)
+/*data
+data/
+
+# Training runs (intermediate checkpoints - too large)
+runs/detect/train/weights/last.pt
+runs/detect/train/weights/epoch*.pt
+runs/predict/
+runs/predict_display/
+
+# YOLO base weights (downloaded automatically)
+challenge/yolo11n.pt
+challenge/yolov8n.pt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv
+
+# Testing
+.coverage
+.pytest_cache/
+reports/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep artifacts (needed for API)
+!artifacts/
+!artifacts/*.pt
+!artifacts/*.json
+!artifacts/*.onnx
