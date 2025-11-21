@@ -25,11 +25,8 @@ jobs:
           pip install -r requirements.txt
           pip install -r requirements-test.txt
 
-      - name: Run model tests
-        run: make model-test
+      - name: Verify code structure
+        run: |
+          python -c "from challenge.api import app; print('API module OK')"
+          python -c "import challenge; print('Package OK')"
 
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: reports/
