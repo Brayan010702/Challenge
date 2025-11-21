@@ -6,6 +6,8 @@ This project implements an object detection system for industrial/workplace safe
 
 ## Part I: Model Training and Evaluation
 
+**Training Environment**: Google Colab (Tesla T4 GPU) was used for model training to leverage free GPU resources and accelerate the training process.
+
 ### Dataset Analysis
 
 The dataset contains images with 17 classes related to industrial safety:
@@ -17,9 +19,10 @@ The dataset contains images with 17 classes related to industrial safety:
 
 | Parameter | Value | Justification |
 |-----------|-------|---------------|
-| EPOCHS | 20 | Balance between convergence and training time |
+| EPOCHS | 20 | Balance between convergence and training time on Colab |
 | IMGSZ | 640 | Standard YOLO size, good balance for industrial scenes |
-| BATCH | 16 | Optimized for available GPU memory |
+| BATCH | 16 | Optimized for Colab T4 GPU memory (16GB) |
+| DEVICE | cuda | Colab GPU acceleration |
 | MODEL | YOLO11n | Lightweight model suitable for deployment |
 
 ### Results
