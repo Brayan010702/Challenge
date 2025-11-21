@@ -1,2 +1,2 @@
 # Development dependencies
-# Add any dev tools here if needed (linters, formatters, etc.)
+ruff>=0.4.0
